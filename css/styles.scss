@@ -31,54 +31,93 @@ html {
   height: 100vh;
 }
 
-.main {
-  background-image: url(../images/bg-pattern.svg);
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: auto;
-  height: 100vh;
-  padding: 4rem 1.25rem;
+p,
+span {
+  color: var(--toggle-bg);
+}
+
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+}
+
+.main {
+  background-image: url(../images/bg-pattern.svg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding-top: 4rem;
   .heading-container {
     background-image: url(../images/pattern-circles.svg);
-    background-repeat: no-repeat;
     background-size: contain;
-    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 
-    height: 150px;
-
-    background-position: center center;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    height: 20vh;
+
     h2 {
       margin-bottom: 10px;
-      text-align: center;
-      font-size: 1.5rem;
     }
+
     p {
-      color: var(--toggle-bg);
-      font-weight: 400;
-      width: 100%;
-
-      min-width: 200px;
-      max-width: 100%;
-
-      line-height: 1.8;
+      width: 200px;
       text-align: center;
+      line-height: 1.8;
     }
   }
+  .card-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 4rem;
+    .card {
+      width: 100%;
+      background-color: var(--pricing-com-bg);
+      padding: 14px;
+      border-radius: 20px;
 
-  .card {
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
-    background-color: var(--pricing-com-bg);
-    border-radius: 12px;
-    margin-top: 36px;
+      flex-direction: column;
+
+      p {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+      }
+      input[type="range"] {
+        appearance: none;
+        margin-top: 30px;
+        margin-bottom: 28px;
+        width: 100%;
+        height: 8px;
+        border-radius: 50px;
+        background: var(--empty-slider-bg);
+        outline: none;
+        &::-webkit-slider-thumb {
+          appearance: none;
+          background-color: var(--slider-bg);
+          background-image: url(../images/icon-slider.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          border: 0;
+          border-radius: 50%;
+          cursor: pointer;
+          height: 42px;
+          width: 42px;
+        }
+      }
+      h1 {
+        font-size: 2.25rem;
+
+        span {
+          font-size: 1rem;
+          letter-spacing: 1px;
+          font-weight: 600;
+          margin-left: 6px;
+        }
+      }
+    }
   }
 }
