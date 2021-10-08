@@ -86,6 +86,24 @@ span {
   margin-top: 4rem;
 }
 
+@media (min-width: 1440px) {
+  .main .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .main .card-container .card {
   width: 100%;
   background-color: var(--pricing-com-bg);
@@ -97,9 +115,52 @@ span {
           flex-direction: column;
 }
 
+@media (min-width: 1440px) {
+  .main .card-container .card {
+    max-width: 40%;
+  }
+}
+
 .main .card-container .card .top {
   padding: 14px;
   width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .main .card-container .card .top {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.main .card-container .card .top .top-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media (min-width: 1440px) {
+  .main .card-container .card .top .top-inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .main .card-container .card .top .top-inner h1 {
+    font-size: 3.4rem;
+  }
 }
 
 .main .card-container .card p {
@@ -192,6 +253,18 @@ span {
   height: 18px;
 }
 
+.main .card-container .card .switch-container .discount .discount-txt {
+  visibility: hidden;
+}
+
+@media (min-width: 1440px) {
+  .main .card-container .card .switch-container .discount .discount-txt {
+    opacity: 1;
+    color: var(--discount-text);
+    margin-left: 2px;
+  }
+}
+
 .main .card-container .card .switch-container .switch {
   position: relative;
   display: inline-block;
@@ -254,5 +327,52 @@ span {
 .main .card-container .card .content-container {
   margin-top: 30px;
   margin-bottom: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1440px) {
+  .main .card-container .card .content-container {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.main .card-container .card .content-container p {
+  text-transform: capitalize;
+  line-height: 2.4;
+  letter-spacing: normal;
+}
+
+@media (min-width: 1440px) {
+  .main .card-container .card .content-container p {
+    text-align: left;
+  }
+}
+
+.main .card-container .card .content-container button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: var(--text-cta-bg);
+  color: var(--main-bg);
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 20px;
+}
+
+@media (min-width: 1440px) {
+  .main .card-container .card .content-container button {
+    padding: 12px 60px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

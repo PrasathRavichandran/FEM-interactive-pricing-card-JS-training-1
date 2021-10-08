@@ -14,6 +14,12 @@
   --text-cta-bg: hsl(227, 35%, 25%);
 }
 
+@mixin for_desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -74,16 +80,44 @@ span {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 4rem;
+    @include for_desktop {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .card {
       width: 100%;
       background-color: var(--pricing-com-bg);
       padding-top: 20px;
       border-radius: 20px;
       flex-direction: column;
+      @include for_desktop {
+        max-width: 40%;
+      }
       .top {
         padding: 14px;
         width: 100%;
+        @include for_desktop {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+        .top-inner {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 40px;
+          padding-right: 40px;
+          @include for_desktop {
+            flex-direction: row;
+            h1 {
+              font-size: 3.4rem;
+            }
+          }
+        }
       }
+
       p {
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -149,6 +183,15 @@ span {
           padding-left: 8px;
           padding-right: 8px;
           height: 18px;
+          .discount-txt {
+            // opacity: 0;
+            visibility: hidden;
+            @include for_desktop {
+              opacity: 1;
+              color: var(--discount-text);
+              margin-left: 2px;
+            }
+          }
         }
         .switch {
           position: relative;
@@ -208,6 +251,34 @@ span {
       .content-container {
         margin-top: 30px;
         margin-bottom: 30px;
+        flex-direction: column;
+        @include for_desktop {
+          width: 100%;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+        p {
+          text-transform: capitalize;
+          line-height: 2.4;
+          letter-spacing: normal;
+          @include for_desktop {
+            text-align: left;
+          }
+        }
+        button {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          background-color: var(--text-cta-bg);
+          color: var(--main-bg);
+          border: 0;
+          border-radius: 20px;
+          padding: 12px 20px;
+          @include for_desktop {
+            padding: 12px 60px;
+          }
+        }
       }
     }
   }
