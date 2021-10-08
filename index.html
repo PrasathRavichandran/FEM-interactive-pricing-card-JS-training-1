@@ -40,9 +40,29 @@
       </header>
       <div class="card-container">
         <div class="card flex">
-          <p class="views"></p>
-          <input type="range" />
-          <h1 class="amount flex"></h1>
+          <div class="top">
+            <p class="views"></p>
+            <input type="range" id="rangeInput" />
+            <h1 class="amount flex"></h1>
+          </div>
+
+          <div class="switch-container">
+            <p>Monthly billing</p>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <div class="flex">
+              <p>Yearly billing</p>
+              <span class="discount flex">-25%</span>
+            </div>
+          </div>
+
+          <div class="seperator"></div>
+
+          <div class="content-container">
+            
+          </div>
         </div>
       </div>
     </section>

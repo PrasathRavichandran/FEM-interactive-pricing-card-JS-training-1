@@ -1,3 +1,9 @@
+
+document.getElementById('rangeInput').oninput = function () {
+    let value = (this.value - this.min) / (this.max - this.min) * 100;
+    this.style.background = 'linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) ' + value + '%, hsl(224, 65%, 95%) ' + value + '%, hsl(224, 65%, 95%) 100%)'
+}
+
 const main = document.querySelectorAll('.main');
 
 const dataInput = {
@@ -44,7 +50,7 @@ if (main.length > 0) {
             window.addEventListener('input', function (e) {
                 e.preventDefault();
                 handlePriceSlider(priceInput, priceOutput);
-            })
+            });
         }
     }
 }
@@ -52,8 +58,8 @@ if (main.length > 0) {
 function handlePriceSlider(input, output) {
     output.views.innerHTML = `${input.data[input.el.value]}K PageViews`;
     for (let i = 0; i < Object.keys(output.data).length; i++) {
-        if(input.el.value === Object.keys(output.data)[i]){
+        if (input.el.value === Object.keys(output.data)[i]) {
             output.amount.innerHTML = `$${output.data[i]} <span>/month</span>`
-        }   
+        }
     }
 }
