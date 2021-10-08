@@ -1,26 +1,50 @@
-# Frontend Mentor - Interactive pricing component
+# Frontend Mentor - Interactive pricing component solution
 
-![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Interactive pricing component challenge on Frontend Mentor](https://github.com/PrasathRavichandran/FEM-interactive-pricing-card-JS-training-1). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking my coding.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-This challenges helps me to improve my coding skills in Javascript and gives me freedom to play with DOM manipulation
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this interactive pricing component and get it looking as close to the design as possible.
-### Page view and pricing totals
+Users should be able to:
 
-Here are the different page view ranges and the corresponding monthly price totals:
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Use the slider and toggle to see prices for different page view numbers
 
-- 10K pageviews / $8 per month
-- 50K pageviews / $12 per month
-- 100K pageviews / $16 per month
-- 500k pageviews / $24 per month
-- 1M pageviews / $36 per month
+### Screenshot
 
-If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices.
+![Desktop View](./design/desktop-view.png)
 
-**Have fun building!** 🚀
+![Mobile View](./design/mobile-view.png)
+
+### Links
+
+- Solution URL: [https://github.com/PrasathRavichandran/FEM-interactive-pricing-card-JS-training-1](https://github.com/PrasathRavichandran/FEM-interactive-pricing-card-JS-training-1)
+- Live Site URL: [https://codesandbox.io/s/interactive-price-slider-vanilla-js-mvu9d?file=/src/index.js](https://codesandbox.io/s/interactive-price-slider-vanilla-js-mvu9d?file=/src/index.js)
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+### Useful resources
+
+- [input range different color](https://stackoverflow.com/questions/18389224/how-to-style-html5-range-input-to-have-different-color-before-and-after-slider) - This helped me for style HTML5 range input to have different color before and after slider.
+## Author
+
+- Website - Prasath Ravichandran
+- Frontend Mentor - [@prasathravichandran](https://www.frontendmentor.io/profile/PrasathRavichandran)
